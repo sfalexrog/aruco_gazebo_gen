@@ -3,7 +3,7 @@
     <model name="aruco_$marker_id">
         <static>true</static>
         <link name="marker_${marker_id}_link">
-            <pose>0 0 1e-3 0 0 1.5707</pose>
+            <pose>0 0 1e-3 0 0 1.5707963267948966</pose>
             <collision name="collision_marker_${marker_id}">
                 <geometry>
                     <box>
