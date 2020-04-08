@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<sdf version="1.5">
+    <model name="aruco_$marker_id">
+        <static>true</static>
+        <link name="marker_${marker_id}_link">
+            <pose>0 0 1e-3 0 0 1.5707</pose>
+            <collision name="collision_marker_${marker_id}">
+                <geometry>
+                    <box>
+                        <size>$marker_full_size $marker_full_size 1e-3</size>
+                    </box>
+                </geometry>
+            </collision>
+            <visual name="visual_marker_${marker_id}">
+                <cast_shadows>false</cast_shadows>
+                <geometry>
+                    <box>
+                        <size>$marker_full_size $marker_full_size 1e-3</size>
+                    </box>
+                </geometry>
+                <material>
+                    <script>
+                        <uri>model://aruco_${marker_id}/materials/scripts</uri>
+                        <uri>model://aruco_${marker_id}/materials/textures</uri>
+                        <name>aruco/marker_${marker_id}</name>
+                    </script>
+                </material>
+            </visual>
+        </link>
+    </model>
+</sdf>
