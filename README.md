@@ -39,6 +39,14 @@ where you wish the model inclusions to be placed. A good example would be after 
     <!-- more descriptions -->
 ```
 
+Now run the script to generate a new .world file based on your new template:
+
+```bash
+python3 ./generator.py <path/to/your/map.txt>
+```
+
+You can place your newly generated `aruco_world.world` file back to the original folder of your project and rename it if necessary.
+
 ## Shortcomings
 
 Since this is a quick and dirty way to generate worlds, there are multiple issues with it:
