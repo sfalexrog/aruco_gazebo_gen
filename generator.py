@@ -6,7 +6,7 @@ import os
 import string
 
 # FIXME: Add support for additional dictionaries
-aruco_dict = cv2.aruco_Dictionary.get(cv2.aruco.DICT_4X4_1000)
+aruco_dict = cv2.aruco.getPredefinedDictionary(cv2.aruco.DICT_4X4_1000)
 marker_bits = 4
 marker_outer_bits = marker_bits + 2
 marker_border_bits = marker_outer_bits + 2
@@ -55,7 +55,7 @@ def add_marker(marker_id: int, size: float, x: float, y: float, z: float = 0,
 
 
 def create_world():
-    world_template_str = ''.join(open('templates/world_template.world').readlines())
+    world_template_str = ''.join(open('templates/clever.world').readlines())
     world_template = string.Template(world_template_str)
     with open('aruco_world.world', 'w') as f:
         f.write(world_template.substitute(model_inclusions=world_string))
